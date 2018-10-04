@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New York Times Search</title>
+	<!-- Character set -->
+	<meta charset="utf-8">
+	<!-- Style sheets -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- FontAwesome -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+</head>
+<body>
+	<!-- Main window -->
+	<div id="container"> 
+		<div id="banner">
+			<img src="assets/images/banner.png"/>
+		</div>
+		<br>
+		<!-- The Search div -->
+		<div id="search"> 
+			<div id="searchBar">
+				<img src="assets/images/searchbar.png"/>
+			</div>	
+			<br>	
+			<!-- Form for input search values -->
+			<form>
+			    <div class="fields">
+			    	<!-- Search Term - i.e. value -->
+			    	<label for="searchText">Search Term:</label>
+			    	<input type="text" id="searchText" name="searchValue">
+			    	<!-- Records to Retrieve - choice of 10, 20, 50 or 100 -->
+			    	<label for="recordsToRetrieve">Number of Records to Retrieve:</label>
+			    	<select id="recordsToRetrieve" name="records">	
+			    		<option value="10">10</option>
+			    		<option value="20">20</option>
+			    		<option value="50">50</option>
+			    		<option value="100">100</option>
+			    	</select>	
+			    	<!-- Starting Year -->
+			    	<label for="startYear">Start Year:</label>
+			    	<input type="year" id="startYear" name="starting">
+			    	<!-- Ending Year -->
+			    	<label for="endYear">End Year:</label>
+			    	<input type="year" id="endYear" name="ending">
+			    	<!-- Search and Clear buttons with icons -->
+			    	<button id="searchButton" type="button"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+			    	<button id="clearButton" type="button"><i class="fa fa-trash" aria-hidden="true"></i> Clear Results</button> 
+			    </div>
+		 	</form>
+		</div>
+		<br>
+		<!-- The Results div - hidden until the search returns results -->
+		<div id="results">
+			<div id="resultsBar">
+				<img src="assets/images/resultsbar.png"/>
+			</div>
+			<br>
+			<div>
+				<!-- Results Textarea -->
+				<textarea rows="10" id="resultsText" style="resize: none;"></textarea>
+				<!-- New Search button -->
+			    <button id="newSearch" type="button"><i class="fa fa-search" aria-hidden="true"></i> New Search</button>				
+			</div>
+		</div>
+	</div>
+
+  <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha206-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>	
+<!-- The Javascript -->
+    <script type="text/javascript" src="assets/javascript/nytimesWARMER.js"></script>	
+
+</body>
+</html>
